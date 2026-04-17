@@ -1,0 +1,11 @@
+anthropic
+openai
+langfuse
+python-dotenv
+chromadb
+sentence-transformers
+pymupdf
+watchdog
+streamlit
+opentelemetry-instrumentation-openai
+rank-bm25
