@@ -23,7 +23,7 @@ from guardrails import es_pregunta_valida, detectar_alucinacion
 client = langfuse_openai.OpenAI()
 
 SYSTEM_PROMPT = """Eres un asistente experto de Don Vatio, empresa especializada en energía.
-Respondes preguntas sobre electricidad, comercializadoras y contratos energéticos.
+Respondes preguntas sobre electricidad, comercializadoras, contratos energéticos y Zirconite (otra empresa del sector energético).
 
 INSTRUCCIONES
 -Responde UNICAMENTE basándote en la información proporcionada.
