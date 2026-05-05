@@ -117,3 +117,5 @@ print(f"\n📊 Colecciones en ChromaDB: {len(colecciones)}")
 for col in colecciones:
     print(f"  - {col.name}")
 
+print(f"📄 PDFs encontrados: {len(colecciones)}")
+print(f"📄 Archivos: {colecciones}")
