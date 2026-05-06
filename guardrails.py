@@ -12,7 +12,7 @@ def es_pregunta_valida(pregunta: str, client) -> bool:
         max_tokens=10,
         messages=[
             {"role": "system","content": "Eres un clasificador. Responde sólo SI o NO."},
-            {"role": "user","content": f"¿Esta pregunta está relacionada con energía eléctrica, comercializadoras de luz, tarifas eléctricas, Don Vatio, Zirconite (empresa del sector energético), facturas de electricidad o el sector energético español? Pregunta: '{pregunta}'"}
+            {"role": "user","content": f"¿Esta pregunta está relacionada con energía eléctrica, comercializadoras de luz, tarifas eléctricas, Don Vatio, Zirconite (empresa del sector energético), zirconite, facturas de electricidad o el sector energético español? Pregunta: '{pregunta}'"}
             ]
     )
 
