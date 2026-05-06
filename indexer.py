@@ -71,7 +71,7 @@ def indexar_documento(ruta_pdf: str):
 
     print(f" {nombre_archivo} indexado correctamente")
 
-def buscar_en_docs(pregunta: str, n_results: int = 3) -> list:
+def buscar_en_docs(pregunta: str, n_results: int = 6) -> list:
     """Busca en todos los documentros indexados"""
     embedding_pregunta = modelo.encode(pregunta).tolist()
 
