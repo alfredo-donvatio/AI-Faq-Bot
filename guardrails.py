@@ -3,10 +3,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+TERMINOS_PERMITIDOS = ["zirconite", "don vatio", "factura", "luz", "electricidad", "tarifa", "comercializadora"]
+
 
 def es_pregunta_valida(pregunta: str, client) -> bool:
     """Verifica si la pregunta está relacionada con el mercado energético"""
 
+    # Bypass directo para términos conocidos
+    pregunta_lower = pregunta.lower()
+    for termino in TERMINOS_PERMITIDOS:
+        if termino in pregunta_lower:
+            return True
+
+    # Si no contiene términos conocidos, usa el LLM
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         max_tokens=10,
