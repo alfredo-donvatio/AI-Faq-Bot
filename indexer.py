@@ -51,7 +51,7 @@ def indexar_documento(ruta_pdf: str):
     texto = leer_pdf(ruta_pdf)
 
     #2. Hacer chunks
-    chunks = hacer_chunks(texto)
+    chunks = hacer_chunks(texto, chunk_size=1000, overlap=100)
     print(f" {len(chunks)} chunks generados")
 
     #3. Generar embeddings
