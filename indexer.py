@@ -104,12 +104,6 @@ if __name__ == "__main__":
         print(f"\n📄 {r['documento']} (distancia: {r['distancia']:.3f})")
         print(f"{r['texto'][:200]}...")
 
-
-if __name__ == "__main__": #no se ejecuta cuando se importa como modulo, sólo cuando se ejecuta 
-    docs_path = Path("./docs")
-    for pdf in docs_path.glob("*.pdf"):
-        indexar_documento(str(pdf))
-
 # indexa los archivos cada vez
 docs_path = Path("./docs")
 for pdf in docs_path.glob("*.pdf"):
